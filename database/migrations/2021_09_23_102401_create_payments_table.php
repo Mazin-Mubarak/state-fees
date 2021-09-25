@@ -16,9 +16,9 @@ class CreatePaymentsTable extends Migration
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
             $table->float('amount');
-            $table->bigInteger('service_id');
-            $table->bigInteger('store_id');
-            $table->bigInteger('user_id')->nullable();
+            $table->bigInteger('service_id')->unsigned();
+            $table->bigInteger('store_id')->unsigned();
+            $table->bigInteger('user_id')->unsigned()->nullable();
             $table->enum('payment_type', [
                 "E-PAYMENT", "CASH"
             ]);

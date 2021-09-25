@@ -119,5 +119,6 @@ class UsersController extends Controller
         return response([
             'message'=>'logout successful'
         ]);
+        
     }
 }

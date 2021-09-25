@@ -19,7 +19,7 @@ class CreateStoresTable extends Migration
             $table->string('owner_name');
             $table->string('address');
             $table->bigInteger('commercial_id');
-            $table->string('password');
+            $table->string('password')->nullable();
             $table->timestamps();
         });
     }
